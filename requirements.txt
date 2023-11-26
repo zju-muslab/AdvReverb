@@ -1,0 +1,12 @@
+hydra-core==1.3.2
+mel_cepstral_distance==0.0.2
+numpy==1.23.3
+omegaconf==2.2.3
+pandas==1.5.1
+pesq==0.0.4
+scipy==1.11.4
+speechbrain==0.5.13
+torch==1.8.2+cu111
+torch==1.10.1+cu111
+torchaudio==0.10.1+cu111
+tqdm==4.64.1

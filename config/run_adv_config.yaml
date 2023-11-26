@@ -1,0 +1,41 @@
+root_dir: /path/to/AdvReverb
+project: AdvReverb
+task: asr
+
+seed: 2022
+device: 2
+gpu: true
+target: 1
+save_wav: false
+wav_len: null # 16000 for KWS, 48000 for ASI, null for ASR
+carrier: music # speech, music
+patience: 50
+
+
+dataset:
+  asr: data/asr_librispeech_3200.csv
+  asi: data/asi_voxceleb_3200.csv
+  enroll: data/asi_voxceleb_enroll_3200.csv
+  kws: data/kws_speechcommand_3200.csv
+  music: data/music
+  rir_template_dir: data/rir
+  kenku_tgt_wav_path: data/kenku_target/open_the_door.wav
+
+defaults:
+  - asr: wav2vec2
+  - asi: ecapa_tdnn
+  - kws: bc_resnet
+  - adv: rir
+
+speech_trans:
+  - CLEAR ALL APPOINTMENTS ON CALENDAR
+  - SHUT DOWN THE POWER SOURCE
+  - SEND ME YOUR MESSAGES
+  - CALL NINE ONE ONE
+  - OPEN THE DOOR
+  - OPEN THE CAMERA
+  - LOG IN PAYPAL
+
+hydra:
+  run:
+    dir: outputs/${carrier}_${task}_${adv.name}_target${target}

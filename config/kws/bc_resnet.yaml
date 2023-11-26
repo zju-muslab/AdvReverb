@@ -1,0 +1,30 @@
+name: bc_resnet
+feature:
+  sr: 16000
+  n_mels: 40
+  n_fft: 512
+  win_length: 30
+  hop_length: 10
+n_class: 35
+savedir: ckpt/kws
+
+network:
+  scale: 8
+  input_layer:
+    in_dim: 1
+    out_dim: 16
+    kernel: [5, 5]
+    stride: [2, 1]
+    padding: [2, 2]
+  back_layer:
+    kernel: [3, 1]
+    strides: [[1,1], [2,1], [2,1], [1,1]]
+    padding: [1, 0]
+    dilations: [[1,1], [1,2], [1,4], [1,8]]
+    block_nums: [2, 2, 4, 4]
+    hidden_dims: [8, 12, 16, 20]
+  neck_layer:
+    kernel: [5, 1]
+    out_dim: 32
+  head_layer:
+    hid_dim: 256

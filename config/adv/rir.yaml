@@ -1,0 +1,15 @@
+name: rir
+epoch: 1000 #200, 1000, 3000
+lr: 0.001
+alpha: 5 # 5, 5, 0.1
+mode: local
+
+rir_type: sf
+rir_len: 3200
+overlap: 160
+
+rir_path:
+  sn: data/rir/RVB2014_type1_rir_smallroom1_near_angla.wav
+  sf: data/rir/RVB2014_type1_rir_smallroom1_far_angla.wav
+  ln: data/rir/RVB2014_type1_rir_largeroom1_near_angla.wav
+  lf: data/rir/RVB2014_type1_rir_largeroom1_far_angla.wav

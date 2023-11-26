@@ -1,0 +1,4 @@
+name: wav2vec2
+source: ckpt/asr/asr-wav2vec2-librispeech
+savedir: ckpt/asr/asr-wav2vec2-librispeech
+blank_index: 0

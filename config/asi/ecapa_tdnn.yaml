@@ -1,0 +1,7 @@
+name: ecapa_tdnn
+n_class: 7205
+n_mels: 80
+emb_dim: 192
+channels: [1024, 1024, 1024, 1024, 3072]
+source: speechbrain/spkrec-ecapa-voxceleb
+savedir: ckpt/asi/spkrec-ecapa-voxceleb

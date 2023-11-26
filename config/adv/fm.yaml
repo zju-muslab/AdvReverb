@@ -1,0 +1,9 @@
+name: fm
+epoch: 3000
+lr: 0.001
+alpha: 10 # 100, 10, 0.5
+n_fft: 2048
+win_len: 2048
+hop_len: 512
+sr: 16000
+psd_bound: 96

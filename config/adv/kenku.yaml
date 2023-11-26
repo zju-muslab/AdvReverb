@@ -1,0 +1,9 @@
+name: kenku
+epoch: 10000
+lr: 0.001
+alpha: 3 # 10, 100
+n_mfcc: 40
+n_mels: 128
+n_fft: 400
+hop_length: 200
+epsilon: 0.0001
